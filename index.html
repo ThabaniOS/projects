@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThabaniØS — Project Status</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── VARIABLES ── */
+    :root {
+      --bg:       #08080a;
+      --surface:  #0f0f12;
+      --surface2: #16161a;
+      --border:   #222228;
+      --accent:   #e8d44d;
+      --accent2:  #4de8a0;
+      --accent3:  #e84d4d;
+      --accent4:  #7b88e8;
+      --accent5:  #e87b4d;
+      --muted:    #52525e;
+      --text:     #e4e4ec;
+      --text2:    #86868e;
+    }
+
+    /* ── BASE ── */
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── GRAIN TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.65;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.55s ease both;
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 28px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-left { display: flex; flex-direction: column; gap: 6px; }
+
+    .header-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .header-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 54px;
+      line-height: 1;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .header-title em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .timestamp-pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 100px;
+      padding: 5px 14px;
+    }
+
+    .header-brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── TABS ── */
+    .tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-top: 32px;
+    }
+
+    .tab {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 12px 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .tab:hover { color: var(--text2); }
+
+    .tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      padding: 12px 0 80px;
+    }
+
+    /* ── COLUMN HEADERS ── */
+    .col-headers {
+      display: grid;
+      grid-template-columns: 260px 140px 1fr 220px;
+      gap: 16px;
+      padding: 0 24px 10px;
+    }
+
+    .col-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── PROJECT CARDS ── */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      border-top-width: 2px;
+      animation: fadeUp 0.55s ease both;
+    }
+
+    .project-card.type-business { border-top-color: var(--accent); }
+    .project-card.type-personal { border-top-color: var(--accent4); }
+
+    .card-inner {
+      display: grid;
+      grid-template-columns: 260px 140px 1fr 220px;
+      gap: 16px;
+      align-items: start;
+      padding: 20px 24px;
+    }
+
+    /* ── CARD COL: PROJECT NAME ── */
+    .project-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+
+    .type-badge {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-business {
+      color: var(--accent);
+      background: rgba(232, 212, 77, 0.08);
+      border: 1px solid rgba(232, 212, 77, 0.25);
+    }
+
+    .badge-personal {
+      color: var(--accent4);
+      background: rgba(123, 136, 232, 0.08);
+      border: 1px solid rgba(123, 136, 232, 0.25);
+    }
+
+    /* ── CARD COL: LAST UPDATED ── */
+    .last-updated {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      padding-top: 2px;
+    }
+
+    .age-fresh   { color: var(--accent2); }
+    .age-recent  { color: var(--accent); }
+    .age-aging   { color: var(--accent5); }
+    .age-stale   { color: var(--accent3); }
+
+    /* ── CARD COL: NEXT ACTION ── */
+    .next-action {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.5;
+      padding-top: 2px;
+    }
+
+    /* ── CARD COL: BLOCKER ── */
+    .blocker-col { padding-top: 2px; }
+
+    .blocker-clear {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      background: rgba(77, 232, 160, 0.08);
+      border: 1px solid rgba(77, 232, 160, 0.2);
+      border-radius: 2px;
+      padding: 4px 10px;
+    }
+
+    .blocker-present {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .blocker-dot {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent3);
+      margin-top: 5px;
+    }
+
+    .blocker-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: #e8a04d;
+      line-height: 1.5;
+    }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      padding: 64px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── LOADING STATE ── */
+    .loading-state {
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .loading-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .loading-pulse {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-left: 8px;
+      animation: pulse 1s ease-in-out infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50%       { opacity: 1; }
+    }
+
+    /* ── ERROR STATE ── */
+    .error-state {
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .error-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent3);
+      margin-bottom: 8px;
+    }
+
+    .error-msg {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── SORT INDICATOR ── */
+    .sort-indicator {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 24px;
+      margin-bottom: 8px;
+    }
+
+    /* ── SORTABLE COL HEADERS ── */
+    .col-header.sortable {
+      appearance: none;
+      -webkit-appearance: none;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 2px;
+      transition: color 0.15s, background-color 0.15s;
+    }
+
+    .col-header.sortable:hover {
+      color: var(--text2);
+      background: rgba(232, 212, 77, 0.07);
+    }
+
+    .sort-arrow {
+      color: var(--accent);
+      display: inline-block;
+      width: 8px;
+      font-size: 9px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .page { padding: 0 16px; }
+
+      header { padding: 24px 0 20px; }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .header-title { font-size: 42px; }
+
+      .header-right {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .col-headers { display: none; }
+
+      .card-inner {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 16px;
+      }
+
+      .tabs { gap: 0; overflow-x: auto; }
+      .tab  { white-space: nowrap; padding: 10px 14px; }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner fade-up">
+        <div class="header-left">
+          <span class="header-eyebrow">ThabaniØS / Project Brief</span>
+          <h1 class="header-title">PROJECT<em>STATUS</em></h1>
+        </div>
+        <div class="header-right">
+          <span class="timestamp-pill" id="generatedAt">—</span>
+          <span class="header-brand">Raiis.Tech</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <nav class="tabs fade-up" style="animation-delay:0.08s">
+      <button class="tab active" data-filter="all">All Projects</button>
+      <button class="tab" data-filter="business">Business</button>
+      <button class="tab" data-filter="personal">Personal</button>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Loading -->
+      <div class="loading-state" id="loadingState">
+        <span class="loading-label">Loading projects<span class="loading-pulse"></span></span>
+      </div>
+
+      <!-- Error -->
+      <div class="error-state" id="errorState" style="display:none">
+        <div class="error-label">Failed to load status.json</div>
+        <div class="error-msg" id="errorMsg">Run <code>npm run brief</code> to generate it.</div>
+      </div>
+
+      <!-- Content -->
+      <div id="content" style="display:none">
+        <div class="sort-indicator" id="sortIndicator">SORTED BY: LAST UPDATED · OLDEST FIRST</div>
+        <div class="col-headers fade-up" style="animation-delay:0.14s" id="colHeaders">
+          <button class="col-header sortable" data-sort="title">Project <span class="sort-arrow" id="arrow-title"></span></button>
+          <button class="col-header sortable" data-sort="last_modified">Last Updated <span class="sort-arrow" id="arrow-last_modified"></span></button>
+          <span class="col-header">Next Action</span>
+          <span class="col-header">Blocker</span>
+        </div>
+        <div class="projects-list" id="projectsList"></div>
+        <div class="empty-state" id="emptyState" style="display:none">No projects in this category</div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner fade-up" style="animation-delay:0.2s">
+        <span class="footer-text">Thabani · Project Status · Raiis.Tech</span>
+        <span class="footer-text">Built with Claude · Anthropic</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // ── State ──────────────────────────────────────────────────
+    let allProjects = [];
+    let activeFilter = 'all';
+    let sortKey = 'last_modified';
+    let sortDir = 'asc';
+
+    // ── Helpers ────────────────────────────────────────────────
+    function relativeTime(isoString) {
+      const now = Date.now();
+      const then = new Date(isoString).getTime();
+      const diffMs = now - then;
+      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      if (diffDays === 0) return 'today';
+      if (diffDays === 1) return 'yesterday';
+      if (diffDays < 7)  return `${diffDays} days ago`;
+      if (diffDays < 14) return '1 week ago';
+      if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+      if (diffDays < 60) return '1 month ago';
+      return `${Math.floor(diffDays / 30)} months ago`;
+    }
+
+    function ageClass(isoString) {
+      const diffDays = Math.floor((Date.now() - new Date(isoString).getTime()) / 86400000);
+      if (diffDays <= 2)  return 'age-fresh';
+      if (diffDays <= 7)  return 'age-recent';
+      if (diffDays <= 14) return 'age-aging';
+      return 'age-stale';
+    }
+
+    function formatGenerated(isoString) {
+      const d = new Date(isoString);
+      const date = d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+      const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      return `Generated ${date} · ${time}`;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Sort UI ────────────────────────────────────────────────
+    const SORT_LABELS = {
+      title:         { asc: 'PROJECT · A → Z',              desc: 'PROJECT · Z → A' },
+      last_modified: { asc: 'LAST UPDATED · OLDEST FIRST',  desc: 'LAST UPDATED · NEWEST FIRST' }
+    };
+
+    function updateSortUI() {
+      document.querySelectorAll('.sort-arrow').forEach(el => { el.textContent = ''; });
+      const activeArrow = document.getElementById(`arrow-${sortKey}`);
+      if (activeArrow) activeArrow.textContent = sortDir === 'asc' ? '↑' : '↓';
+
+      const indicator = document.getElementById('sortIndicator');
+      if (indicator) indicator.textContent = `SORTED BY: ${SORT_LABELS[sortKey][sortDir]}`;
+    }
+
+    // ── Render ─────────────────────────────────────────────────
+    function renderCard(project, index) {
+      const typeClass = project.type === 'personal' ? 'type-personal' : 'type-business';
+      const badgeClass = project.type === 'personal' ? 'badge-personal' : 'badge-business';
+      const badgeLabel = project.type === 'personal' ? 'Personal' : 'Business';
+      const delay = (0.06 + index * 0.05).toFixed(2);
+
+      const ageC = ageClass(project.last_modified);
+      const relTime = relativeTime(project.last_modified);
+
+      const blockerHtml = project.blocker
+        ? `<div class="blocker-present">
+             <span class="blocker-dot"></span>
+             <span class="blocker-text">${escapeHtml(project.blocker)}</span>
+           </div>`
+        : `<span class="blocker-clear">Clear</span>`;
+
+      return `
+        <div class="project-card ${typeClass}" style="animation-delay:${delay}s">
+          <div class="card-inner">
+            <div>
+              <div class="project-name">${escapeHtml(project.title)}</div>
+              <span class="type-badge ${badgeClass}">${badgeLabel}</span>
+            </div>
+            <div class="last-updated ${ageC}">${relTime}</div>
+            <div class="next-action">${escapeHtml(project.next_action)}</div>
+            <div class="blocker-col">${blockerHtml}</div>
+          </div>
+        </div>`;
+    }
+
+    function renderProjects() {
+      const list = document.getElementById('projectsList');
+      const empty = document.getElementById('emptyState');
+
+      const filtered = (activeFilter === 'all'
+        ? allProjects
+        : allProjects.filter(p => p.type === activeFilter)
+      ).slice();
+
+      filtered.sort((a, b) => {
+        if (sortKey === 'title') {
+          const cmp = a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+          return sortDir === 'asc' ? cmp : -cmp;
+        }
+        const diff = new Date(a.last_modified) - new Date(b.last_modified);
+        return sortDir === 'asc' ? diff : -diff;
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = '';
+        empty.style.display = 'block';
+      } else {
+        empty.style.display = 'none';
+        list.innerHTML = filtered.map((p, i) => renderCard(p, i)).join('');
+      }
+    }
+
+    // ── Tabs ───────────────────────────────────────────────────
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeFilter = tab.dataset.filter;
+        sortKey = 'last_modified';
+        sortDir = 'asc';
+        updateSortUI();
+        renderProjects();
+      });
+    });
+
+    // ── Sort columns ───────────────────────────────────────────
+    document.querySelectorAll('.col-header.sortable').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.sort;
+        if (sortKey === key) {
+          sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortKey = key;
+          sortDir = 'asc';
+        }
+        updateSortUI();
+        renderProjects();
+      });
+    });
+
+    // ── Load data ──────────────────────────────────────────────
+    async function loadStatus() {
+      try {
+        const res = await fetch('./status.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
+        const data = await res.json();
+
+        allProjects = data.projects || [];
+
+        // Timestamp pill
+        if (data.generated) {
+          document.getElementById('generatedAt').textContent = formatGenerated(data.generated);
+        }
+
+        document.getElementById('loadingState').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        updateSortUI();
+        renderProjects();
+      } catch (err) {
+        document.getElementById('loadingState').style.display = 'none';
+        document.getElementById('errorState').style.display = 'block';
+        document.getElementById('errorMsg').textContent =
+          `${err.message} — Run npm run brief to generate status.json`;
+      }
+    }
+
+    loadStatus();
+  </script>
+</body>
+</html>
+<!-- force redeploy -->

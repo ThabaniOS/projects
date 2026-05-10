@@ -1,0 +1,143 @@
+{
+  "generated": "2026-05-10T21:12:01.210Z",
+  "total": 15,
+  "business": 13,
+  "personal": 2,
+  "projects": [
+    {
+      "id": "angola-loyalty",
+      "title": "Angola Loyalty",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.166Z",
+      "next_action": "Follow up with project stakeholder to determine if Angola Loyalty should remain paused or be reactivated",
+      "blocker": "Project is paused with no active next steps"
+    },
+    {
+      "id": "angola-market-intelligence",
+      "title": "Angola Market Intelligence & Merchandising Platform",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.170Z",
+      "next_action": "Begin building the MVP for the Angola Market Intelligence platform, starting with technical scoping of the OCR/AI pipeline architecture",
+      "blocker": null
+    },
+    {
+      "id": "crazy-plastics",
+      "title": "Crazy Plastics — eCommerce Infrastructure Platform",
+      "type": "business",
+      "date_canvassed": "2026-04-07",
+      "last_modified": "2026-05-04T12:35:28.178Z",
+      "next_action": "Review project outcomes and gather performance metrics or client feedback to strengthen the case study",
+      "blocker": null
+    },
+    {
+      "id": "depositbridge",
+      "title": "DepositBridge — Financial Product",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.185Z",
+      "next_action": "Prepare for the product exploration meeting with Delon and Stephen by reviewing Stephen's integration documentation and drafting questions around product problem definition, integration scope, regulatory constraints, and data protection requirements",
+      "blocker": "Product exploration meeting with Delon and Stephen has not been held yet, preventing validation of the core product problem, integration requirements, and regulatory constraints needed to move from architecture demo to viable product"
+    },
+    {
+      "id": "easyghg",
+      "title": "EasyGHG — Carbon Intelligence & Regulatory Reporting Platform",
+      "type": "business",
+      "date_canvassed": "2026-04-07",
+      "last_modified": "2026-05-04T12:35:28.191Z",
+      "next_action": "Monitor platform usage and gather user feedback to identify potential improvements or expansion opportunities",
+      "blocker": null
+    },
+    {
+      "id": "ferreira-fresh",
+      "title": "Ferreira Fresh — AI Order Processing Automation",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.196Z",
+      "next_action": "Follow up with Claudia to obtain additional pricing sheet examples needed to finalize validation logic",
+      "blocker": "Sage ERP version not yet confirmed, preventing finalization of ERP integration scope"
+    },
+    {
+      "id": "francos-salon-booking",
+      "title": "Franco's Salon Booking System",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.200Z",
+      "next_action": "Prepare presentation materials for Carlos meeting that demonstrate the demo MVP, position the solution against current booking leakage problem, and include cost estimates based on LionLead development hours plus infrastructure costs",
+      "blocker": "Meeting with Carlos (client) not yet scheduled"
+    },
+    {
+      "id": "hod",
+      "title": "HOD Platform — Diamond Operating System",
+      "type": "business",
+      "date_canvassed": "2026-05-10",
+      "last_modified": "2026-05-10T21:07:47.812Z",
+      "next_action": "Confirm build status of Buyers Dashboard and Stone Movement components with the development team to establish what is live versus still in design",
+      "blocker": "Rapaport price list ingestion is manual and error-prone; decision needed on data ingestion path (RapNet API licensing vs alternative automation)"
+    },
+    {
+      "id": "lionlead",
+      "title": "LionLead — Real Estate AI Platform",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.205Z",
+      "next_action": "Confirm pricing numbers and presentation format with Michael, then schedule and prepare for the product presentation meeting",
+      "blocker": "Awaiting decision on presentation format and final pricing confirmation before presenting to Michael"
+    },
+    {
+      "id": "raiis-overview",
+      "title": "Raiis — Company Overview",
+      "type": "business",
+      "date_canvassed": "2026-04-07",
+      "last_modified": "2026-05-04T12:35:28.210Z",
+      "next_action": "Convert Ferreira Fresh or Sundowns Fan Intelligence from pre-contract/manual status to signed recurring revenue contract",
+      "blocker": "90-day runway pressure with no recurring client revenue yet despite having two Priority 1 projects"
+    },
+    {
+      "id": "raiis-website",
+      "title": "Raiis — Website & Brand",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.214Z",
+      "next_action": "Begin execution of the v2 build plan, starting with the look and feel upgrade and content rewrite to make copy sound more human",
+      "blocker": "Time allocation"
+    },
+    {
+      "id": "sundowns-fan-intelligence",
+      "title": "Sundowns Fan Intelligence — Fan Data Platform",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.219Z",
+      "next_action": "Conduct product exploration exercise to identify required features for packaging the platform as a standalone commercial product",
+      "blocker": null
+    },
+    {
+      "id": "voice-agent-platform",
+      "title": "Voice Agent Platform — AI Voice Infrastructure",
+      "type": "business",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.224Z",
+      "next_action": "Prepare for the Mo meeting by conducting a product exploration exercise to define the enterprise solution architecture, identify leverage points for Mo's organization, and develop a presentation strategy that positions Raiis as solution architects with credible portfolio assets and technical capabilities.",
+      "blocker": "Meeting with Mo not yet scheduled (expected within two weeks)"
+    },
+    {
+      "id": "personal_voice_assistant",
+      "title": "Personal Voice Agent — Project Status Query System",
+      "type": "personal",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.229Z",
+      "next_action": "Build the FastAPI query endpoint and set up the Supabase project_status table with seeded data from status.json",
+      "blocker": null
+    },
+    {
+      "id": "thabaniOS-dashboard-pwa",
+      "title": "ThabaniOS Dashboard — PWA Conversion",
+      "type": "personal",
+      "date_canvassed": "2026-05-01",
+      "last_modified": "2026-05-04T12:35:28.235Z",
+      "next_action": "Create manifest.json and service worker files to convert the dashboard into a PWA",
+      "blocker": null
+    }
+  ]
+}
