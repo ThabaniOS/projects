@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-10T21:12:01.210Z",
-  "total": 15,
-  "business": 13,
+  "generated": "2026-05-11T08:11:21.286Z",
+  "total": 16,
+  "business": 14,
   "personal": 2,
   "projects": [
     {
@@ -10,8 +10,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.166Z",
-      "next_action": "Follow up with project stakeholder to determine if Angola Loyalty should remain paused or be reactivated",
-      "blocker": "Project is paused with no active next steps"
+      "next_action": "Schedule the POS connectivity session with Nicholas to unblock the technical integration and resume active development",
+      "blocker": "Project is explicitly paused with no active next steps; key unknowns unresolved include POS connectivity with Nicholas, unit economics, points earn/redemption rates, Africa's Talking Angola carrier coverage, and currency confirmation"
     },
     {
       "id": "angola-market-intelligence",
@@ -19,7 +19,7 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.170Z",
-      "next_action": "Begin building the MVP for the Angola Market Intelligence platform, starting with technical scoping of the OCR/AI pipeline architecture",
+      "next_action": "Begin building the MVP, starting with scoping the OCR/AI pipeline architecture as the first technical workstream",
       "blocker": null
     },
     {
@@ -28,7 +28,7 @@
       "type": "business",
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.178Z",
-      "next_action": "Review project outcomes and gather performance metrics or client feedback to strengthen the case study",
+      "next_action": "Leverage the live platform's transaction data to identify opportunities for targeted promotions or stock optimisation, and document findings to inform the client's next growth phase.",
       "blocker": null
     },
     {
@@ -37,8 +37,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.185Z",
-      "next_action": "Prepare for the product exploration meeting with Delon and Stephen by reviewing Stephen's integration documentation and drafting questions around product problem definition, integration scope, regulatory constraints, and data protection requirements",
-      "blocker": "Product exploration meeting with Delon and Stephen has not been held yet, preventing validation of the core product problem, integration requirements, and regulatory constraints needed to move from architecture demo to viable product"
+      "next_action": "Review the integration documentation sent by Stephen before the stakeholder meeting with Delon and Stephen",
+      "blocker": "The stakeholder meeting with Delon and Stephen has not yet been held, leaving the core product problem, integration scope, and regulatory constraints undefined"
     },
     {
       "id": "easyghg",
@@ -46,7 +46,7 @@
       "type": "business",
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.191Z",
-      "next_action": "Monitor platform usage and gather user feedback to identify potential improvements or expansion opportunities",
+      "next_action": "Review published case study and portfolio content to identify opportunities for client outreach or case study promotion, given the platform is live and fully delivered.",
       "blocker": null
     },
     {
@@ -55,8 +55,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.196Z",
-      "next_action": "Follow up with Claudia to obtain additional pricing sheet examples needed to finalize validation logic",
-      "blocker": "Sage ERP version not yet confirmed, preventing finalization of ERP integration scope"
+      "next_action": "Follow up with Claudia to obtain additional pricing sheet examples so validation logic mapping can proceed",
+      "blocker": "Sage ERP version unconfirmed, preventing finalisation of ERP integration scope"
     },
     {
       "id": "francos-salon-booking",
@@ -64,8 +64,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.200Z",
-      "next_action": "Prepare presentation materials for Carlos meeting that demonstrate the demo MVP, position the solution against current booking leakage problem, and include cost estimates based on LionLead development hours plus infrastructure costs",
-      "blocker": "Meeting with Carlos (client) not yet scheduled"
+      "next_action": "Schedule the meeting with Carlos and prepare a presentation that frames the product around Franco's specific booking leakage problem, including a cost estimate modelled on LionLead's development hours plus infrastructure and maintenance costs.",
+      "blocker": "The client meeting with Carlos has not been scheduled, stalling sign-off on the build cost and preventing the project from moving into active development."
     },
     {
       "id": "hod",
@@ -73,8 +73,8 @@
       "type": "business",
       "date_canvassed": "2026-05-10",
       "last_modified": "2026-05-10T21:07:47.812Z",
-      "next_action": "Confirm build status of Buyers Dashboard and Stone Movement components with the development team to establish what is live versus still in design",
-      "blocker": "Rapaport price list ingestion is manual and error-prone; decision needed on data ingestion path (RapNet API licensing vs alternative automation)"
+      "next_action": "Confirm build status of Buyers Dashboard and Stone Movement Management — determine what is live versus still in design before any further development is scoped",
+      "blocker": "RapNet API requires paid licensing and no decision has been made on the Rapaport data ingestion path, leaving the valuation engine dependent on a slow, error-prone manual workaround"
     },
     {
       "id": "lionlead",
@@ -82,8 +82,17 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.205Z",
-      "next_action": "Confirm pricing numbers and presentation format with Michael, then schedule and prepare for the product presentation meeting",
-      "blocker": "Awaiting decision on presentation format and final pricing confirmation before presenting to Michael"
+      "next_action": "Confirm pricing numbers and schedule a meeting with Michael to present the pitch deck and MVP demo",
+      "blocker": "Presentation format and confirmed pricing must be resolved before getting in front of Michael, and no pilot agency has committed yet"
+    },
+    {
+      "id": "Project Update 11052026",
+      "title": "Project Update 11052026",
+      "type": "business",
+      "date_canvassed": null,
+      "last_modified": "2026-05-11T07:59:09.487Z",
+      "next_action": "Record and send the Lionlead demo with pricing to Mike today, as it is the highest-priority deadline for the week",
+      "blocker": "The Sage integration and pricing file structure for Ferreira Fresh are not yet understood, blocking further development on that project"
     },
     {
       "id": "raiis-overview",
@@ -91,8 +100,8 @@
       "type": "business",
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.210Z",
-      "next_action": "Convert Ferreira Fresh or Sundowns Fan Intelligence from pre-contract/manual status to signed recurring revenue contract",
-      "blocker": "90-day runway pressure with no recurring client revenue yet despite having two Priority 1 projects"
+      "next_action": "Initiate contract conversations with Ferreira Fresh and Sundowns to convert at least one into a paying engagement before the quarter ends",
+      "blocker": "No direct client revenue is converting yet — both Priority 1 projects are pre-contract or manually run, creating critical pressure against a 90-day runway"
     },
     {
       "id": "raiis-website",
@@ -100,8 +109,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.214Z",
-      "next_action": "Begin execution of the v2 build plan, starting with the look and feel upgrade and content rewrite to make copy sound more human",
-      "blocker": "Time allocation"
+      "next_action": "Begin executing the v2 build using the documented build plan in raw/website_workflow.md and raw/raiis_design_spec.md",
+      "blocker": null
     },
     {
       "id": "sundowns-fan-intelligence",
@@ -109,8 +118,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.219Z",
-      "next_action": "Conduct product exploration exercise to identify required features for packaging the platform as a standalone commercial product",
-      "blocker": null
+      "next_action": "Conduct the product exploration exercise to define what must be added to package the Fan Intelligence Platform as a standalone commercial product",
+      "blocker": "No clear decision yet on what features or packaging are required to turn the current build into a standalone commercial product — this must be resolved before Phase 2 or the club presentation can move forward meaningfully"
     },
     {
       "id": "voice-agent-platform",
@@ -118,8 +127,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.224Z",
-      "next_action": "Prepare for the Mo meeting by conducting a product exploration exercise to define the enterprise solution architecture, identify leverage points for Mo's organization, and develop a presentation strategy that positions Raiis as solution architects with credible portfolio assets and technical capabilities.",
-      "blocker": "Meeting with Mo not yet scheduled (expected within two weeks)"
+      "next_action": "Conduct the product exploration exercise to define what Raiis can architect for Mo's company, identify leverage points, and prepare the enterprise positioning strategy before the meeting is scheduled",
+      "blocker": "Meeting with Mo has not yet been scheduled, and the required pre-meeting preparation (product exploration, enterprise positioning strategy, credibility asset mapping) is not yet done"
     },
     {
       "id": "personal_voice_assistant",
@@ -127,7 +136,7 @@
       "type": "personal",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.229Z",
-      "next_action": "Build the FastAPI query endpoint and set up the Supabase project_status table with seeded data from status.json",
+      "next_action": "Set up the Supabase project_status table using the provided SQL schema and run the one-time seed script to populate it from the existing status.json file",
       "blocker": null
     },
     {
@@ -136,7 +145,7 @@
       "type": "personal",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.235Z",
-      "next_action": "Create manifest.json and service worker files to convert the dashboard into a PWA",
+      "next_action": "Create manifest.json and a service worker file and add them to the dashboard repo to begin the PWA conversion",
       "blocker": null
     }
   ]
