@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-11T08:48:48.435Z",
+  "generated": "2026-05-11T09:16:14.132Z",
   "total": 15,
   "business": 13,
   "personal": 2,
@@ -11,7 +11,7 @@
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.166Z",
       "next_action": "Schedule the POS connectivity session with Nicholas to unblock technical integration and resume active development",
-      "blocker": "Project is explicitly paused with no active next steps; key unknowns unresolved including POS connectivity, unit economics, points earn/redemption rates, Africa's Talking Angola carrier coverage, and currency confirmation"
+      "blocker": "Project is explicitly paused with no active next steps; key decisions on POS connectivity, unit economics, points earn rate, carrier coverage, and currency are unresolved"
     },
     {
       "id": "angola-market-intelligence",
@@ -28,7 +28,7 @@
       "type": "business",
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.178Z",
-      "next_action": "Leverage the live platform and published case study to actively pitch Crazy Plastics as a reference project in new business conversations with similar retail or eCommerce prospects.",
+      "next_action": "Leverage the live platform's transaction data to identify opportunities for targeted promotions or stock optimisation and present findings to the client",
       "blocker": null
     },
     {
@@ -37,8 +37,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:44:02.082Z",
-      "next_action": "Read and fully understand Stephen's integration documentation before the stakeholder meeting with Delon and Stephen",
-      "blocker": "Stephen's integration documentation has not yet been reviewed, and this review must be completed before the meeting can be productively scheduled"
+      "next_action": "Read and fully understand Stephen's integration documentation before the stakeholder meeting with Delon and Stephen.",
+      "blocker": "Stephen's integration documentation has not yet been reviewed, and this review must be completed before the meeting can productively take place."
     },
     {
       "id": "easyghg",
@@ -46,7 +46,7 @@
       "type": "business",
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.191Z",
-      "next_action": "Review the published case study and portfolio content to identify opportunities for promoting EasyGHG to prospective mid-market clients or partners",
+      "next_action": "Develop a case study or portfolio asset that captures measurable client outcomes to support sales and marketing efforts for EasyGHG",
       "blocker": null
     },
     {
@@ -55,8 +55,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:43:56.756Z",
-      "next_action": "Prepare for the Tuesday meeting by compiling specific questions on the Sage ERP version, connection method, and required data format, as well as questions on how the pricing files are structured and documented",
-      "blocker": "Sage ERP environment is not yet understood — version, connection method, and required data format are unconfirmed, preventing ERP integration scope from being finalised and blocking further development progress"
+      "next_action": "Prepare for the Tuesday meeting by listing specific questions about the Sage ERP version, connection method, and required data format, as well as questions to clarify how the pricing files are structured and documented",
+      "blocker": "Sage ERP environment is unknown — version, connection method, and required data format are unconfirmed, preventing ERP integration from being scoped or built"
     },
     {
       "id": "francos-salon-booking",
@@ -64,7 +64,7 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:43:40.301Z",
-      "next_action": "Audit and verify all demo artifacts on Vercel to ensure they are fully functional and ready to present to Carlos at any time",
+      "next_action": "Audit and verify all demo artifacts are fully functional so the product is ready to showcase to Carlos at any time",
       "blocker": null
     },
     {
@@ -73,7 +73,7 @@
       "type": "business",
       "date_canvassed": "2026-05-10",
       "last_modified": "2026-05-11T08:43:49.064Z",
-      "next_action": "Complete the stock management page redesign and build, then coordinate with the developer to ensure dashboard reconfiguration is on track for this week's deadline",
+      "next_action": "Complete the stock management page redesign and build, then coordinate with the developer to finish the dashboard reconfiguration targeted for this week.",
       "blocker": null
     },
     {
@@ -83,7 +83,7 @@
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:43:10.351Z",
       "next_action": "Complete the demo recording and send it to Michael today alongside the confirmed pricing email",
-      "blocker": "Demo recording not yet sent to Michael — delays getting the pitch in front of him this week"
+      "blocker": "Demo recording not yet completed and pricing numbers not yet confirmed, preventing the pitch from reaching Michael this week"
     },
     {
       "id": "raiis-overview",
@@ -92,7 +92,7 @@
       "date_canvassed": "2026-04-07",
       "last_modified": "2026-05-04T12:35:28.210Z",
       "next_action": "Initiate contract conversations with Ferreira Fresh and Sundowns to convert at least one into a paying engagement before the quarter ends",
-      "blocker": "No direct client revenue is converting yet — both Priority 1 projects are pre-contract or manually run, and the 90-day runway depends on closing one within the quarter"
+      "blocker": "No direct client revenue is converting yet — both Priority 1 projects are pre-contract or manually run, creating critical pressure against a 90-day runway"
     },
     {
       "id": "raiis-website",
@@ -100,7 +100,7 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:43:19.632Z",
-      "next_action": "Complete and push v3 stylistic and copy changes before the 11 May deadline",
+      "next_action": "Complete and push v3 stylistic and copy changes to hit the 11 May deadline",
       "blocker": null
     },
     {
@@ -108,9 +108,9 @@
       "title": "Sundowns Fan Intelligence — Fan Data Platform",
       "type": "business",
       "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-04T12:35:28.219Z",
-      "next_action": "Run the product exploration exercise to identify what features are needed to package the platform as a standalone commercial product",
-      "blocker": "No clear decision yet on what additions are required to make the platform commercially packageable — this must be resolved before development or sales efforts can advance"
+      "last_modified": "2026-05-11T09:14:32.954Z",
+      "next_action": "Ingest the new activation CSV from last Friday, run end-to-end segmentation, tag the data correctly, sync to the dashboard, and set up the first email sequences for this cohort.",
+      "blocker": null
     },
     {
       "id": "voice-agent-platform",
@@ -118,8 +118,8 @@
       "type": "business",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-11T08:44:10.304Z",
-      "next_action": "Schedule and conduct alignment session with Ryan before midweek to agree on presentation strategy, positioning, and what to pitch for the Mo meeting",
-      "blocker": "Presentation strategy and internal alignment with Ryan not yet completed, leaving the team unprepared for the imminent enterprise meeting with Mo"
+      "next_action": "Schedule and conduct the alignment session with Ryan before midweek to agree on presentation strategy, positioning, and which portfolio assets to highlight for the Mo meeting",
+      "blocker": "Presentation strategy and internal alignment with Ryan are not yet complete, leaving the team unprepared for the imminent enterprise meeting with Mo"
     },
     {
       "id": "personal_voice_assistant",
@@ -136,7 +136,7 @@
       "type": "personal",
       "date_canvassed": "2026-05-01",
       "last_modified": "2026-05-04T12:35:28.235Z",
-      "next_action": "Create manifest.json and a service worker file to begin the PWA conversion, then deploy and test 'Add to Home Screen' on both iOS and Android",
+      "next_action": "Create manifest.json and a basic service worker file to begin the PWA conversion, then deploy and test 'Add to Home Screen' on both iOS and Android",
       "blocker": null
     }
   ]
