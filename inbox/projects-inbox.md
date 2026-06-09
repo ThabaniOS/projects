@@ -27,3 +27,7 @@ EMERGING THESIS — What idea am I building toward without having stated it expl
 CONTRADICTIONS — What have I saved recently that contradicts something I believed before? Show me both sides from my own notes.
 KNOWLEDGE GAPS — Based on what I am reading and thinking about, what am I clearly not reading that I should be? What perspective is missing?
 ONE ACTION — Given everything in this vault, what is the single highest-leverage thing I could do or think about this week?
+
+---
+**[IDEA]** 2026-06-09 22:08
+capture regression test
