@@ -31,3 +31,7 @@ ONE ACTION — Given everything in this vault, what is the single highest-levera
 ---
 **[IDEA]** 2026-06-09 22:08
 capture regression test
+
+---
+**[IDEA]** 2026-07-02 18:25
+https://www.instagram.com/reel/DZLDPGExR-1/?igsh=MTN1bHNndjg1M2c0ZA==
