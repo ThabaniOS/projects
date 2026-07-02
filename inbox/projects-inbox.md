@@ -35,3 +35,7 @@ capture regression test
 ---
 **[IDEA]** 2026-07-02 18:25
 https://www.instagram.com/reel/DZLDPGExR-1/?igsh=MTN1bHNndjg1M2c0ZA==
+
+---
+**[IDEA]** 2026-07-02 18:26
+https://www.instagram.com/reel/DZ5R87lTGMS/?igsh=MXFjZDd5ZHA2YzQ0cg==
