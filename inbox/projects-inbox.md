@@ -55,3 +55,7 @@ https://www.instagram.com/reel/DZ-AORszRRS/?igsh=OHVjNnM2N3NoMm1q
 ---
 **[IDEA]** 2026-07-06 12:12
 Build layers https://www.instagram.com/reel/DZAw8CcRXM6/?igsh=MW43YXZtcWhvbmJxYw==
+
+---
+**[IDEA]** 2026-07-06 12:15
+App Security https://www.instagram.com/reel/DZQU76-x-1G/?igsh=dWZseTRxYnV3MWZr
