@@ -51,3 +51,7 @@ https://www.instagram.com/reel/DZhgwoBEZrF/?igsh=ejZuaHNzZHhreWxt
 ---
 **[IDEA]** 2026-07-05 06:57
 https://www.instagram.com/reel/DZ-AORszRRS/?igsh=OHVjNnM2N3NoMm1q
+
+---
+**[IDEA]** 2026-07-06 12:12
+Build layers https://www.instagram.com/reel/DZAw8CcRXM6/?igsh=MW43YXZtcWhvbmJxYw==
