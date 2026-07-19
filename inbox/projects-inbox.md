@@ -63,3 +63,7 @@ App Security https://www.instagram.com/reel/DZQU76-x-1G/?igsh=dWZseTRxYnV3MWZr
 ---
 **[IDEA]** 2026-07-06 12:20
 cost management https://www.instagram.com/reel/DZQZx6iJz9K/?igsh=Zmc5MmxrY2oyZHU0
+
+---
+**[IDEA]** 2026-07-19 07:18
+SSR https://www.instagram.com/reel/DaUt21ZOM-K/?igsh=cjZ6dGh3ZjcwOGQ5
