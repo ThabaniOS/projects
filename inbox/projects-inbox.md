@@ -75,3 +75,7 @@ code reviewer https://www.instagram.com/reel/DaEFVNAqINA/?igsh=MWh5emN6YjhidzFwd
 ---
 **[IDEA]** 2026-07-20 05:43
 app clean up
+
+---
+**[IDEA]** 2026-07-20 05:43
+app clean up https://www.instagram.com/reel/DaBJZy8ovVY/?igsh=MWhsNW9vbDZiY2M5NQ==
