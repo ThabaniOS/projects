@@ -67,3 +67,7 @@ cost management https://www.instagram.com/reel/DZQZx6iJz9K/?igsh=Zmc5MmxrY2oyZHU
 ---
 **[IDEA]** 2026-07-19 07:18
 SSR https://www.instagram.com/reel/DaUt21ZOM-K/?igsh=cjZ6dGh3ZjcwOGQ5
+
+---
+**[IDEA]** 2026-07-20 05:29
+code reviewer https://www.instagram.com/reel/DaEFVNAqINA/?igsh=MWh5emN6YjhidzFwdA==
