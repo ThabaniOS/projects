@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "generated": "2026-10-26T21:37:17.876Z",
+  "generated": "2026-10-26T21:37:42.205Z",
   "total": 20,
   "business": 18,
   "personal": 2,
@@ -202,14 +202,6 @@
           "text": "Review migrated project files (priorities, finish lines, tasks)"
         },
         {
-          "id": "OS-2",
-          "text": "Link GitHub to Claude so cloud sessions can reach ThabaniOS/projects"
-        },
-        {
-          "id": "OS-3",
-          "text": "Phase 1: repo restructure, schema, status.json Action"
-        },
-        {
           "id": "OS-4",
           "text": "Phase 2: /api/telegram with tools and confirm/undo"
         },
@@ -226,8 +218,8 @@
           "text": "Move sunset files into local archive/ and out of outputs/"
         }
       ],
-      "done_count": 0,
-      "last_log": "2026-10-26: v4 scoped; bot moves to Vercel; confirm-before-commit chosen. Spec in SPEC.md.",
+      "done_count": 2,
+      "last_log": "2026-10-26: Phase 1 live — schema, builder and Action on master; restore point on branch pre-v4.",
       "title": "ThabaniOS v4",
       "type": "personal",
       "next_action": "OS-1 Review migrated project files (priorities, finish lines, tasks)",
