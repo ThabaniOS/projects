@@ -1,143 +1,798 @@
 {
-  "generated": "2026-05-13T12:24:03.430Z",
-  "total": 15,
-  "business": 13,
+  "schema_version": 4,
+  "generated": "2026-10-26T21:36:28.176Z",
+  "total": 20,
+  "business": 18,
   "personal": 2,
   "projects": [
     {
-      "id": "angola-loyalty",
-      "title": "Angola Loyalty",
+      "id": "franco-booking",
+      "name": "Franco International Booking System",
+      "ticker": "FRN",
+      "status": "active",
+      "category": "raiis",
+      "client": "Carlos (Franco International salon group)",
+      "priority": 1,
+      "finish_line": "Production build brief handed to Thanyani and Phase 1 in development in Laravel",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "FRN-1",
+          "text": "Finish reverse-engineering the prototype front end (booking form + admin dashboard)"
+        },
+        {
+          "id": "FRN-2",
+          "text": "Write the production build brief for Thanyani (Laravel)"
+        },
+        {
+          "id": "FRN-3",
+          "text": "Internal cost estimate: timeline, resources, hosting, build + maintenance"
+        },
+        {
+          "id": "FRN-4",
+          "text": "Confirm WhatsApp API scope (Phase 2/3 dependency)"
+        },
+        {
+          "id": "FRN-5",
+          "text": "Scope POS integration for loyalty points"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Franco International Booking System",
       "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-04T12:35:28.166Z",
-      "next_action": "Schedule the POS connectivity session with Nicholas to unblock technical integration and resume the build",
-      "blocker": "Project is explicitly paused with no active next steps; key decisions on unit economics, points earn rate, redemption threshold, carrier coverage, and currency are unresolved"
-    },
-    {
-      "id": "angola-market-intelligence",
-      "title": "Angola Market Intelligence & Merchandising Platform",
-      "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-11T08:43:30.575Z",
-      "next_action": "Build the MVP and prepare a working model with full technical understanding ready to present to Nicholas on Thursday",
-      "blocker": null
-    },
-    {
-      "id": "crazy-plastics",
-      "title": "Crazy Plastics — eCommerce Infrastructure Platform",
-      "type": "business",
-      "date_canvassed": "2026-04-07",
-      "last_modified": "2026-05-04T12:35:28.178Z",
-      "next_action": "Leverage the completed platform as a case study to prospect for similar mid-market retailers facing multi-channel inventory and logistics challenges",
-      "blocker": null
-    },
-    {
-      "id": "depositbridge",
-      "title": "DepositBridge — Financial Product",
-      "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-11T08:44:02.082Z",
-      "next_action": "Read and fully understand Stephen's integration documentation before the stakeholder meeting with Delon and Stephen.",
-      "blocker": "Stephen's integration documentation has not yet been reviewed, and this review must be completed before the meeting can be productive or scheduled."
-    },
-    {
-      "id": "easyghg",
-      "title": "EasyGHG — Carbon Intelligence & Regulatory Reporting Platform",
-      "type": "business",
-      "date_canvassed": "2026-04-07",
-      "last_modified": "2026-05-04T12:35:28.191Z",
-      "next_action": "Leverage the live platform to pursue case study-driven outreach or sales conversations with mid-market prospects facing mandatory reporting deadlines",
-      "blocker": null
-    },
-    {
-      "id": "ferreira-fresh",
-      "title": "Ferreira Fresh — AI Order Processing Automation",
-      "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-13T12:17:25.004Z",
-      "next_action": "Package the client-requested changes from the Claudia demo session into structured developer notes, ready to walk through with the development team",
-      "blocker": "Client-requested changes from the demo session have not yet been documented, blocking the development team from progressing the build"
-    },
-    {
-      "id": "francos-salon-booking",
-      "title": "Franco's Salon Booking System",
-      "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-11T08:43:40.301Z",
-      "next_action": "Audit and verify all demo artifacts on Vercel to ensure they are fully functional and ready to showcase to Carlos at any time",
-      "blocker": null
+      "next_action": "FRN-1 Finish reverse-engineering the prototype front end (booking form + admin dashboard)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     },
     {
       "id": "hod",
-      "title": "HOD Platform — Diamond Operating System",
+      "name": "HOD — Hall of Diamonds",
+      "ticker": "HOD",
+      "status": "active",
+      "category": "raiis",
+      "client": "Basel (CEO), Mahdi, Mo (daily operator)",
+      "priority": 1,
+      "finish_line": "v1 refresh shipped (Stock Management, Dashboard, Add Stock, Rap component) and signed off by Mahdi",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "HOD-1",
+          "text": "Brief Thanyani on Mahdi's design changes, mobile responsiveness and chatbot"
+        },
+        {
+          "id": "HOD-2",
+          "text": "Unblock the Rapaport work with Thanyani (sent, idle since July)"
+        },
+        {
+          "id": "HOD-3",
+          "text": "Widen the Rapaport engine to be band-aware (5×8 below 0.30ct, 10×11 at and above)"
+        },
+        {
+          "id": "HOD-4",
+          "text": "Build grid-mode-aware pdf_parser.py against the golden PDF"
+        },
+        {
+          "id": "HOD-5",
+          "text": "Get Mo's decision on out-of-band pricing (6.00–9.99ct and above 10.99ct)"
+        },
+        {
+          "id": "HOD-6",
+          "text": "Fix CERT column not pulling text"
+        },
+        {
+          "id": "HOD-7",
+          "text": "Build the faceted filter system"
+        },
+        {
+          "id": "HOD-8",
+          "text": "Pricing conversation with Basel (trial month, then quarterly in advance)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "HOD — Hall of Diamonds",
       "type": "business",
-      "date_canvassed": "2026-05-10",
-      "last_modified": "2026-05-13T12:18:29.410Z",
-      "next_action": "Follow up with developers on dashboard build progress and schedule the team review session",
-      "blocker": null
+      "next_action": "HOD-1 Brief Thanyani on Mahdi's design changes, mobile responsiveness and chatbot",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     },
     {
-      "id": "lionlead",
-      "title": "LionLead — Real Estate AI Platform",
+      "id": "leola",
+      "name": "Leola Atelier",
+      "ticker": "LEO",
+      "status": "active",
+      "category": "client-direct",
+      "client": "Lara (Leola Atelier)",
+      "priority": 1,
+      "finish_line": "Online store live on Shopify with payments and Klaviyo, ready before stock lands",
+      "deadline": "2026-11-30",
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "LEO-1",
+          "text": "Finish Shopify store setup"
+        },
+        {
+          "id": "LEO-2",
+          "text": "Set up payment gateway"
+        },
+        {
+          "id": "LEO-3",
+          "text": "Open Klaviyo account"
+        },
+        {
+          "id": "LEO-4",
+          "text": "Scope in-store POS and shared inventory for the showroom"
+        },
+        {
+          "id": "LEO-5",
+          "text": "Set up Leola email on Xneelo"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Leola Atelier",
       "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-13T12:17:47.332Z",
-      "next_action": "Follow up with Michael on the pricing document and demo that were sent to him",
-      "blocker": "Awaiting Michael's response to the pricing document and demo before the project can move forward"
+      "next_action": "LEO-1 Finish Shopify store setup",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     },
     {
-      "id": "raiis-overview",
-      "title": "Raiis — Company Overview",
+      "id": "propconnect",
+      "name": "PropConnect",
+      "ticker": "PRC",
+      "status": "active",
+      "category": "venture",
+      "client": "Dilan, Delon (commercial), Stephen (integrations), Nicholas",
+      "priority": 1,
+      "finish_line": "Investor-ready demo housing all features, good enough for Dilan to present",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "PRC-1",
+          "text": "Bring the Vercel MVP up to investor-demo standard"
+        },
+        {
+          "id": "PRC-2",
+          "text": "Follow up the Platform45 enquiry"
+        },
+        {
+          "id": "PRC-3",
+          "text": "Get Nelson's introduction to a backend dev house"
+        },
+        {
+          "id": "PRC-4",
+          "text": "Put an NDA in place before sharing product detail with any dev house"
+        },
+        {
+          "id": "PRC-5",
+          "text": "Resolve trust-account rules before any bank conversation"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4 (was `depositbridge`).",
+      "title": "PropConnect",
       "type": "business",
-      "date_canvassed": "2026-04-07",
-      "last_modified": "2026-05-04T12:35:28.210Z",
-      "next_action": "Initiate contract conversations with Ferreira Fresh and Sundowns to convert at least one into a paying engagement before the end of Q2, prioritizing whichever is closest to a signed agreement.",
-      "blocker": "No direct client revenue is converting — both Priority 1 projects are pre-contract or manually run, and the 90-day runway depends on closing at least one within the quarter."
+      "next_action": "PRC-1 Bring the Vercel MVP up to investor-demo standard",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "thabanios",
+      "name": "ThabaniOS v4",
+      "ticker": "OS",
+      "status": "active",
+      "category": "personal",
+      "client": null,
+      "priority": 1,
+      "finish_line": "Two-way Telegram ↔ repo ↔ dashboard loop live, with confirm before commit",
+      "deadline": "2026-11-04",
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "OS-1",
+          "text": "Review migrated project files (priorities, finish lines, tasks)"
+        },
+        {
+          "id": "OS-2",
+          "text": "Link GitHub to Claude so cloud sessions can reach ThabaniOS/projects"
+        },
+        {
+          "id": "OS-3",
+          "text": "Phase 1: repo restructure, schema, status.json Action"
+        },
+        {
+          "id": "OS-4",
+          "text": "Phase 2: /api/telegram with tools and confirm/undo"
+        },
+        {
+          "id": "OS-5",
+          "text": "Phase 3: dashboard v4"
+        },
+        {
+          "id": "OS-6",
+          "text": "Phase 4: deactivate n8n ThabaniOS Bot, point webhook at Vercel, end-to-end test"
+        },
+        {
+          "id": "OS-7",
+          "text": "Move sunset files into local archive/ and out of outputs/"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: v4 scoped; bot moves to Vercel; confirm-before-commit chosen. Spec in SPEC.md.",
+      "title": "ThabaniOS v4",
+      "type": "personal",
+      "next_action": "OS-1 Review migrated project files (priorities, finish lines, tasks)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "golden-key",
+      "name": "Golden Key",
+      "ticker": "GK",
+      "status": "active",
+      "category": "venture",
+      "client": "Golden Key partner + group execs",
+      "priority": 2,
+      "finish_line": "Lead questionnaire live and routing leads into the right email stream",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "GK-1",
+          "text": "Design the website questionnaire that filters leads"
+        },
+        {
+          "id": "GK-2",
+          "text": "Map each lead type to its email stream"
+        },
+        {
+          "id": "GK-3",
+          "text": "Finish the marketing strategy"
+        },
+        {
+          "id": "GK-4",
+          "text": "Plan the TikTok content runway and format tests"
+        },
+        {
+          "id": "GK-5",
+          "text": "Provider outreach plan (property, schooling, banking, cellular, insurance, medical aid)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Golden Key",
+      "type": "business",
+      "next_action": "GK-1 Design the website questionnaire that filters leads",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "opticien",
+      "name": "Opticien Relaunch",
+      "ticker": "OPT",
+      "status": "active",
+      "category": "client-direct",
+      "client": "Opticien (optical boutique)",
+      "priority": 2,
+      "finish_line": "Mailchimp back up, 6-month email plan approved, R2,000/month retainer running",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "OPT-1",
+          "text": "Get Opticien's Mailchimp account back up"
+        },
+        {
+          "id": "OPT-2",
+          "text": "Write the 6-month email content plan"
+        },
+        {
+          "id": "OPT-3",
+          "text": "Send retainer proposal (R2,000/month + Mailchimp recharged on invoice)"
+        },
+        {
+          "id": "OPT-4",
+          "text": "Build the agentic email workflow and design system so the retainer runs on minimal hours"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Opticien Relaunch",
+      "type": "business",
+      "next_action": "OPT-1 Get Opticien's Mailchimp account back up",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "portfolio",
+      "name": "Portfolio & Job Search",
+      "ticker": "PRT",
+      "status": "active",
+      "category": "personal",
+      "client": null,
+      "priority": 2,
+      "finish_line": "Portfolio live and a ready-to-send CV for each career track, so any opportunity can be answered the same day",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "PRT-1",
+          "text": "Write capabilities.md (proven / practised / never shipped) from the checkpoints"
+        },
+        {
+          "id": "PRT-2",
+          "text": "Import ThabaniOS/portfolio into Vercel and publish"
+        },
+        {
+          "id": "PRT-3",
+          "text": "Add recent work (Leola, PropConnect, NexGen as anonymised case studies)"
+        },
+        {
+          "id": "PRT-4",
+          "text": "Refresh the CV for each track: solution architecture, remote web, account director"
+        },
+        {
+          "id": "PRT-5",
+          "text": "Link the portfolio from every CV"
+        },
+        {
+          "id": "PRT-6",
+          "text": "Find part-time remote marketing-ops / implementation work ($500–900/month, evenings SA time)"
+        },
+        {
+          "id": "PRT-7",
+          "text": "Decide: Vercel Pro before any paid web build (Hobby is non-commercial)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4. Merged Web Services (refocused as a personal portfolio) with the job search.",
+      "title": "Portfolio & Job Search",
+      "type": "personal",
+      "next_action": "PRT-1 Write capabilities.md (proven / practised / never shipped) from the checkpoints",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "nexgen",
+      "name": "Sundowns NexGen — Deprecation",
+      "ticker": "NXG",
+      "status": "active",
+      "category": "mb-digital",
+      "client": "Mamelodi Sundowns",
+      "priority": 2,
+      "finish_line": "All applicant data exported to agreed secure storage, platform decommissioned, deletion logged",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "NXG-1",
+          "text": "Confirm with the club that selection is closed and the platform can be retired"
+        },
+        {
+          "id": "NXG-2",
+          "text": "Agree the POPIA retention/deletion schedule in writing with the club"
+        },
+        {
+          "id": "NXG-3",
+          "text": "Export applicants who consented to marketing for Yellow Verse BEFORE anything is deleted"
+        },
+        {
+          "id": "NXG-4",
+          "text": "Decide where the archive lives (club-owned storage preferred over personal accounts)"
+        },
+        {
+          "id": "NXG-5",
+          "text": "Export Supabase DB and Storage bucket to an encrypted archive; verify the restore"
+        },
+        {
+          "id": "NXG-6",
+          "text": "Revoke reviewer accounts and take the Vercel site down"
+        },
+        {
+          "id": "NXG-7",
+          "text": "Delete the Supabase project and Gravity Forms uploads once the archive is verified"
+        },
+        {
+          "id": "NXG-8",
+          "text": "Write a short deprecation checkpoint (what was kept, where, until when)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Sundowns NexGen — Deprecation",
+      "type": "business",
+      "next_action": "NXG-1 Confirm with the club that selection is closed and the platform can be retired",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "yellow-verse",
+      "name": "Yellow Verse — Sundowns Marketing Engine / Fan Intelligence",
+      "ticker": "YLV",
+      "status": "active",
+      "category": "mb-digital",
+      "client": "Mamelodi Sundowns",
+      "priority": 2,
+      "finish_line": "Engine running again end to end, with the NexGen onboarding stream and refreshed comms live",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "YLV-1",
+          "text": "Health check: does the n8n → MailBlaze pipeline still run end to end?"
+        },
+        {
+          "id": "YLV-2",
+          "text": "Build the NexGen applicant welcome stream (job seekers, not necessarily fans)"
+        },
+        {
+          "id": "YLV-3",
+          "text": "New comms for last season's list"
+        },
+        {
+          "id": "YLV-4",
+          "text": "Refresh marketing collateral with AI design"
+        },
+        {
+          "id": "YLV-5",
+          "text": "Trigger-based automations"
+        },
+        {
+          "id": "YLV-6",
+          "text": "Fans-on check: add activation contacts not already on the database"
+        },
+        {
+          "id": "YLV-7",
+          "text": "Productisation notes: what the user decides vs what the system does, and why someone would pay"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4 (was `sundowns-fan-intelligence`).",
+      "title": "Yellow Verse — Sundowns Marketing Engine / Fan Intelligence",
+      "type": "business",
+      "next_action": "YLV-1 Health check: does the n8n → MailBlaze pipeline still run end to end?",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "arep",
+      "name": "AREP Website Build",
+      "ticker": "AREP",
+      "status": "pipeline",
+      "category": "mb-digital",
+      "client": "African Rainbow Energy and Power — Kashma Raju",
+      "priority": 2,
+      "finish_line": "Estimate approved and the 3-page build kicked off",
+      "deadline": "2026-12-15",
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "AREP-1",
+          "text": "Follow up with Kashma on the estimate before the end of the year"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4. ARE (maintenance client) is not tracked here.",
+      "title": "AREP Website Build",
+      "type": "business",
+      "next_action": "AREP-1 Follow up with Kashma on the estimate before the end of the year",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "sundowns-store",
+      "name": "Sundowns Online Store & Product Sourcing",
+      "ticker": "MSS",
+      "status": "pipeline",
+      "category": "mb-digital",
+      "client": "Mamelodi Sundowns",
+      "priority": 2,
+      "finish_line": "Pitch deck with store build costing and a recommended 3PL ready to present",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "MSS-1",
+          "text": "Research 3PL / fulfilment options (e.g. Parcel Ninja)"
+        },
+        {
+          "id": "MSS-2",
+          "text": "Draft outreach emails to providers"
+        },
+        {
+          "id": "MSS-3",
+          "text": "Decide WordPress vs Shopify"
+        },
+        {
+          "id": "MSS-4",
+          "text": "Product sourcing: supplier shortlist"
+        },
+        {
+          "id": "MSS-5",
+          "text": "Pitch deck + commercials for the store build"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4.",
+      "title": "Sundowns Online Store & Product Sourcing",
+      "type": "business",
+      "next_action": "MSS-1 Research 3PL / fulfilment options (e.g. Parcel Ninja)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "stadium-checkin",
+      "name": "Sundowns Stadium Check-In Pitch",
+      "ticker": "SCI",
+      "status": "pipeline",
+      "category": "mb-digital",
+      "client": "Mamelodi Sundowns",
+      "priority": 2,
+      "finish_line": "Pitch deck covering the check-in mechanism, prize pool and hook, ready to present",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "SCI-1",
+          "text": "Ideation: how check-in works, why supporters come back, what the club gets"
+        },
+        {
+          "id": "SCI-2",
+          "text": "Research the check-in mechanism (QR at gate, phone location, check-in photo) and its edge cases"
+        },
+        {
+          "id": "SCI-3",
+          "text": "Compliance check (POPIA, location data)"
+        },
+        {
+          "id": "SCI-4",
+          "text": "Prize pool and hook using club sponsors"
+        },
+        {
+          "id": "SCI-5",
+          "text": "Cost split and IP position with the club's app developer"
+        },
+        {
+          "id": "SCI-6",
+          "text": "Build the pitch deck"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Added to ThabaniOS v4. First step is ideation.",
+      "title": "Sundowns Stadium Check-In Pitch",
+      "type": "business",
+      "next_action": "SCI-1 Ideation: how check-in works, why supporters come back, what the club gets",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "skubu-angola",
+      "name": "Angola / Skubu",
+      "ticker": "SKU",
+      "status": "pipeline",
+      "category": "venture",
+      "client": null,
+      "priority": 3,
+      "finish_line": "A one-page concept that says what the Angola opportunity is, for whom, and what would be built",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "SKU-1",
+          "text": "Write down what the Angola/Skubu project actually is (the expansion this needs)"
+        },
+        {
+          "id": "SKU-2",
+          "text": "Finish the Skubu case study (business model, dispensing equipment, product range)"
+        },
+        {
+          "id": "SKU-3",
+          "text": "Decide what, if anything, carries over from Angola Loyalty and AngoVast"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4. Needs expanding before it can have real tasks.",
+      "title": "Angola / Skubu",
+      "type": "business",
+      "next_action": "SKU-1 Write down what the Angola/Skubu project actually is (the expansion this needs)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "origami",
+      "name": "Origami Ops System",
+      "ticker": "ORI",
+      "status": "pipeline",
+      "category": "raiis",
+      "client": "Nicholas (product owner, owns store data)",
+      "priority": 3,
+      "finish_line": "v1 scope agreed and data access confirmed for Lightspeed and MarketMan",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "ORI-1",
+          "text": "Identify who can grant Lightspeed and MarketMan API access"
+        },
+        {
+          "id": "ORI-2",
+          "text": "Get a MarketMan report export from Victoria to prototype against"
+        },
+        {
+          "id": "ORI-3",
+          "text": "Spec feature 1: comp / cash anomaly detection from Lightspeed"
+        },
+        {
+          "id": "ORI-4",
+          "text": "Spec feature 2: daily stock-variance flags from MarketMan"
+        },
+        {
+          "id": "ORI-5",
+          "text": "Map Victoria's and Sean's workflows into v1"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Migrated to ThabaniOS v4. Needs expanding.",
+      "title": "Origami Ops System",
+      "type": "business",
+      "next_action": "ORI-1 Identify who can grant Lightspeed and MarketMan API access",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "raiis-payments",
+      "name": "Raiis Payment Reminder Bot",
+      "ticker": "PAY",
+      "status": "live",
+      "category": "raiis",
+      "client": null,
+      "priority": 3,
+      "finish_line": "Every service has a billing day and reminders reach the Raiis partners' group",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "PAY-1",
+          "text": "Fill Digital Ocean billing_day (bot is blind to it)"
+        },
+        {
+          "id": "PAY-2",
+          "text": "Find GoDaddy and Spaceship billing days"
+        },
+        {
+          "id": "PAY-3",
+          "text": "Assign an owner for Railway (or remove it if Lionlead infra is shut down)"
+        },
+        {
+          "id": "PAY-4",
+          "text": "Move reminders to a Raiis partners' Telegram group (swap chat ID)"
+        },
+        {
+          "id": "PAY-5",
+          "text": "Migrate off n8n to a GitHub Actions schedule (see \"Migration plan\" below)"
+        },
+        {
+          "id": "PAY-6",
+          "text": "Before cancelling n8n: confirm nothing else still runs on it (Sundowns marketing engine, Lionlead webhook)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Decided to move off n8n one day — about $27/month for this one automation isn't worth it. Not urgent.",
+      "title": "Raiis Payment Reminder Bot",
+      "type": "business",
+      "next_action": "PAY-1 Fill Digital Ocean billing_day (bot is blind to it)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "angovast",
+      "name": "AngoVast — Market Intelligence",
+      "ticker": "AGV",
+      "status": "paused",
+      "category": "raiis",
+      "client": "Nicholas (Angola)",
+      "priority": 3,
+      "finish_line": "Paused — no work to be done",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [],
+      "done_count": 0,
+      "last_log": "2026-10-26: Paused.",
+      "title": "AngoVast — Market Intelligence",
+      "type": "business",
+      "next_action": "Paused — no work to be done",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "easyghg",
+      "name": "EasyGHG",
+      "ticker": "GHG",
+      "status": "paused",
+      "category": "raiis",
+      "client": null,
+      "priority": 3,
+      "finish_line": "Paused",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [],
+      "done_count": 0,
+      "last_log": "2026-10-26: Paused.",
+      "title": "EasyGHG",
+      "type": "business",
+      "next_action": "Paused",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     },
     {
       "id": "raiis-website",
-      "title": "Raiis — Website & Brand",
+      "name": "Raiis Website",
+      "ticker": "RWS",
+      "status": "paused",
+      "category": "raiis",
+      "client": null,
+      "priority": 3,
+      "finish_line": "Paused",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [
+        {
+          "id": "RWS-1",
+          "text": "When unpaused: remove the Crazy Plastics case study (project removed entirely)"
+        }
+      ],
+      "done_count": 0,
+      "last_log": "2026-10-26: Paused.",
+      "title": "Raiis Website",
       "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-13T12:18:00.066Z",
-      "next_action": "Follow up to get access to the Raiis email accounts so Calendly can be migrated away from the personal email",
-      "blocker": "Access to Raiis email accounts has not been obtained yet, blocking the Calendly migration and email contact setup"
+      "next_action": "RWS-1 When unpaused: remove the Crazy Plastics case study (project removed entirely)",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     },
     {
-      "id": "sundowns-fan-intelligence",
-      "title": "Sundowns Fan Intelligence — Fan Data Platform",
+      "id": "vending",
+      "name": "Vending Machine Business",
+      "ticker": "VND",
+      "status": "paused",
+      "category": "venture",
+      "client": "with James",
+      "priority": 3,
+      "finish_line": "Paused",
+      "deadline": null,
+      "updated": "2026-10-26",
+      "open_tasks": [],
+      "done_count": 0,
+      "last_log": "2026-10-26: Paused.",
+      "title": "Vending Machine Business",
       "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-13T12:17:36.831Z",
-      "next_action": "Prepare the data ingestion and scheduling job for the activation happening this Friday, ensuring the pipeline is ready to process incoming activation lists.",
-      "blocker": "The fans-on configuration logic has not been built — there is no automated check to determine whether activation contacts already exist in the fans-on database or to add them if not."
-    },
-    {
-      "id": "voice-agent-platform",
-      "title": "Voice Agent Platform — AI Voice Infrastructure",
-      "type": "business",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-13T12:18:12.492Z",
-      "next_action": "Schedule and conduct the alignment session with Ryan before midweek to agree on presentation strategy, positioning, and what to pitch for the Mo meeting",
-      "blocker": "Presentation strategy and internal alignment with Ryan are not yet complete, and the Mo meeting is expected this week — without agreeing on positioning and identifying which assets demonstrate enterprise credibility, the team is not ready to meet Mo"
-    },
-    {
-      "id": "personal_voice_assistant",
-      "title": "Personal Voice Agent — Project Status Query System",
-      "type": "personal",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-04T12:35:28.229Z",
-      "next_action": "Set up the Supabase project_status table using the provided SQL schema and run the one-time seed script to populate it from the existing status.json file",
-      "blocker": null
-    },
-    {
-      "id": "thabaniOS-dashboard-pwa",
-      "title": "ThabaniOS Dashboard — PWA Conversion",
-      "type": "personal",
-      "date_canvassed": "2026-05-01",
-      "last_modified": "2026-05-04T12:35:28.235Z",
-      "next_action": "Create manifest.json and a service worker file and add them to the dashboard repo to begin the PWA conversion",
-      "blocker": null
+      "next_action": "Paused",
+      "blocker": null,
+      "date_canvassed": "2026-10-26",
+      "last_modified": "2026-10-26T00:00:00.000Z"
     }
   ]
 }

@@ -137,12 +137,20 @@ Same Vercel project and URL (`dashboard-iota-mauve-68.vercel.app`). Static page 
 
 ---
 
+### Compatibility until Phase 3/4
+`status.json` also carries the v3 fields (`title`, `type`, `next_action`, `blocker`, `date_canvassed`, `last_modified`) so the current `index.html` and the n8n query bot keep working. Drop them once the v4 dashboard and Vercel bot are live.
+
+### Phase 2 note
+`vercel.json` currently rewrites every path to `index.html`. Change it to exclude `/api/` before adding the bot function, e.g. `{ "source": "/((?!api/).*)", "destination": "/index.html" }`.
+
+---
+
 ## 6. Build phases
 
 | Phase | Deliverable | Done when |
 |---|---|---|
 | 0 | This spec + migrated project files | Thabani has reviewed priorities/finish lines |
-| 1 | Repo restructure: tag `pre-v4`, add `projects/`, `schema/`, Action that builds and validates `status.json` | Push to `projects/` produces a valid `status.json` |
+| 1 ✅ | Repo restructure: tag `pre-v4`, add `projects/`, `schema/`, Action that builds and validates `status.json` | Push to `projects/` produces a valid `status.json` |
 | 2 | `/api/telegram` with tools, confirm/undo, allowlist, secret token | Every example in §4 works against a test branch |
 | 3 | Dashboard v4 | Renders all projects from the new `status.json`, protected |
 | 4 | Cutover: deactivate n8n `ThabaniOS Bot`, `setWebhook` to Vercel, end-to-end test | Live message → confirm → commit → dashboard updates within ~60s |

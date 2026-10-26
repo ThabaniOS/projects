@@ -1,0 +1,51 @@
+name: Build status.json
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "projects/**"
+      - "schema/**"
+      - "scripts/build-status.mjs"
+  pull_request:
+    paths:
+      - "projects/**"
+      - "schema/**"
+      - "scripts/build-status.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-status
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # On pull requests: validate only, so a bad file fails the check before merge.
+      - name: Validate
+        if: github.event_name == 'pull_request'
+        run: node scripts/build-status.mjs --check
+
+      - name: Build and commit status.json
+        if: github.event_name != 'pull_request'
+        run: |
+          node scripts/build-status.mjs
+          if git diff --quiet -- status.json; then
+            echo "status.json unchanged"
+            exit 0
+          fi
+          git config user.name "thabanios-bot"
+          git config user.email "thabanios-bot@users.noreply.github.com"
+          git add status.json
+          git commit -m "Rebuild status.json"
+          git push
