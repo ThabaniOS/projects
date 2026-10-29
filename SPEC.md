@@ -101,14 +101,14 @@ Free text. Context, decisions, links to local raw/ folders.
    + LEO-5 Open Klaviyo account
    ```
 2. Inline buttons: **Confirm** / **Edit** / **Cancel**.
-3. The pending change is stored server-side keyed by a short ID (Vercel KV or a `pending/` JSON file in the repo) with a 30-minute expiry.
+3. The pending change is stored as `state/<id>.json` on a separate `bot-state` branch (no extra service; Vercel deploys are disabled for that branch) with a 30-minute expiry.
 4. Confirm → commit via Contents API with the file's current `sha` (optimistic lock; if the sha changed, re-read and re-propose).
 5. After commit, reply with the commit link and an **Undo** button (reverts that one commit).
 6. `capture` is the only write that skips confirmation.
 
 ### Model routing (cost control)
-- Haiku 5.5 for routing, lookups and task updates.
-- Sonnet 5.5 only for `get_focus` and the weekly digest.
+- Haiku 5.5 for every free-text message (`CLAUDE_MODEL` env var overrides).
+- Focus ranking is deterministic code (`lib/focus.mjs`), not a model call: `/focus` costs nothing, and `get_focus` hands Haiku a ready-made ranking to explain. Sonnet is reserved for the weekly digest.
 - Load only the files a request needs. `get_focus` reads `status.json` (compact), not every project file.
 - Prompt caching on the system prompt and tool definitions.
 
@@ -151,7 +151,7 @@ Same Vercel project and URL (`dashboard-iota-mauve-68.vercel.app`). Static page 
 |---|---|---|
 | 0 | This spec + migrated project files | Thabani has reviewed priorities/finish lines |
 | 1 ✅ | Repo restructure: tag `pre-v4`, add `projects/`, `schema/`, Action that builds and validates `status.json` | Push to `projects/` produces a valid `status.json` |
-| 2 | `/api/telegram` with tools, confirm/undo, allowlist, secret token | Every example in §4 works against a test branch |
+| 2 ✅ | `/api/telegram` with tools, confirm/undo, allowlist, secret token | Every example in §4 passes in the offline test suite (`npm test`) |
 | 3 | Dashboard v4 | Renders all projects from the new `status.json`, protected |
 | 4 | Cutover: deactivate n8n `ThabaniOS Bot`, `setWebhook` to Vercel, end-to-end test | Live message → confirm → commit → dashboard updates within ~60s |
 | Later | Weekly digest (Vercel cron), dashboard edits, voice notes, reel pipeline | — |
@@ -162,3 +162,50 @@ Phases 2 and 3 can run in parallel once Phase 1 lands.
 
 ## 7. Out of scope for v4
 Notion sync (`push-to-notion.js`) is not carried forward. The local `wiki/` and `raw/` folders are untouched and stay local.
+
+---
+
+## 8. Phase 2 as built (2026-10-29)
+
+**Files**
+| Path | Role |
+|---|---|
+| `api/telegram.mjs` | Webhook. Checks the secret header, builds the bot from env vars, always answers 200 so Telegram doesn't retry. |
+| `api/setup.mjs` | Health check and cutover: `?secret=…` (report), `&action=connect` (point webhook here), `&action=disconnect`. |
+| `lib/bot.mjs` | Commands, captures, proposals, Confirm/Edit/Cancel/Undo. |
+| `lib/agent.mjs` | Claude tool loop: `get_project`, `get_focus`, `propose_changes` (dry run), `capture`. |
+| `lib/proposal.mjs` | Turns requested changes into file edits + the Telegram diff. Run at preview and again on Confirm against current files. |
+| `lib/project.mjs` | Parse/validate/edit project files. Shared with `scripts/build-status.mjs`. |
+| `lib/github.mjs` | Atomic multi-file commits (Git Data API), `bot-state` branch, commit lookup for Undo. |
+| `test/` | Offline suite with fake GitHub/Telegram/Claude APIs. |
+
+**Behaviour**
+- Shortcuts with no model call: `/focus`, `/p <ticker>`, `/list`, `/help`, and `edge:` / `idea:` / `project:` / `note:` captures (same inbox format as n8n).
+- Completed tasks are logged automatically (`Done: LEO-1 …`); status changes too.
+- Undo restores the files from the bot commit's parent, and refuses if anything touched those files since.
+- Replying to a bot message passes that message to Claude as context (how "Edit" works).
+- Sunsetting deletes the file in the repo and sends it to Telegram as a document for the local `archive/`.
+
+**Vercel settings in `vercel.json`**
+- `ignoreCommand` skips deploys when a commit only touches `projects/` or `inbox/`; the Action's `status.json` commit is what deploys. Halves deploy count.
+- `bot-state` branch never deploys.
+- `.vercelignore` keeps `projects/`, `inbox/`, `SPEC.md`, scripts and tests off the public site. **`status.json` is still public** — decide in Phase 3.
+
+**Phase 3 caveat:** if Vercel Authentication is turned on for *production*, Telegram can't reach `/api/telegram` (it gets Vercel's login page). Protect the dashboard another way, or exempt `/api/` with a protection-bypass rule.
+
+**Environment variables (Vercel → Settings → Environment Variables, Production)**
+| Name | Value |
+|---|---|
+| `TELEGRAM_BOT_TOKEN` | Same token the n8n workflow uses (BotFather) |
+| `TELEGRAM_WEBHOOK_SECRET` | Any long random string (letters, digits, `_`, `-`) |
+| `TELEGRAM_ALLOWED_CHAT_ID` | Thabani's chat ID (in the n8n Telegram Trigger output as `message.chat.id`) |
+| `GITHUB_TOKEN` | Fine-grained PAT, repo `ThabaniOS/projects` only, Contents: read and write |
+| `ANTHROPIC_API_KEY` | The key the n8n bot uses, or a new one |
+| `CLAUDE_MODEL` | Optional, default `claude-haiku-5-5` |
+
+**Cutover (Phase 4)**
+1. Add the env vars, redeploy, open `/api/setup?secret=…` — every line should read ok/set.
+2. Deactivate the n8n **ThabaniOS Bot** workflow (leave the Payment Reminder alone).
+3. Open `/api/setup?secret=…&action=connect`.
+4. Send `/focus`, then a real update; Confirm; check the commit and dashboard.
+5. Rollback: `&action=disconnect`, then re-activate the n8n workflow (it re-registers its webhook).

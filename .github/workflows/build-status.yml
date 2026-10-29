@@ -7,11 +7,15 @@ on:
       - "projects/**"
       - "schema/**"
       - "scripts/build-status.mjs"
+      - "lib/**"
+      - "test/**"
   pull_request:
     paths:
       - "projects/**"
       - "schema/**"
       - "scripts/build-status.mjs"
+      - "lib/**"
+      - "test/**"
   workflow_dispatch:
 
 permissions:
@@ -30,6 +34,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Test
+        run: node --test test/*.test.mjs
 
       # On pull requests: validate only, so a bad file fails the check before merge.
       - name: Validate

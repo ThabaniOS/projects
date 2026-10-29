@@ -1,0 +1,11 @@
+{
+  "name": "thabanios-projects",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "status": "node scripts/build-status.mjs",
+    "check": "node scripts/build-status.mjs --check",
+    "test": "node --test test/*.test.mjs"
+  }
+}

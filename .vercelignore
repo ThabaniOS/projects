@@ -1,0 +1,8 @@
+# Keep raw project data and tooling off the public site.
+# status.json stays (the dashboard reads it); lib/ and schema/ stay (the bot function needs them).
+projects/
+inbox/
+scripts/
+test/
+SPEC.md
+.github/
