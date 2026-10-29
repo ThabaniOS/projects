@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "generated": "2026-10-26T21:37:42.205Z",
+  "generated": "2026-10-29T20:15:40.857Z",
   "total": 20,
   "business": 18,
   "personal": 2,
@@ -195,15 +195,11 @@
       "priority": 1,
       "finish_line": "Two-way Telegram ↔ repo ↔ dashboard loop live, with confirm before commit",
       "deadline": "2026-11-04",
-      "updated": "2026-10-26",
+      "updated": "2026-10-29",
       "open_tasks": [
         {
           "id": "OS-1",
           "text": "Review migrated project files (priorities, finish lines, tasks)"
-        },
-        {
-          "id": "OS-4",
-          "text": "Phase 2: /api/telegram with tools and confirm/undo"
         },
         {
           "id": "OS-5",
@@ -216,16 +212,20 @@
         {
           "id": "OS-7",
           "text": "Move sunset files into local archive/ and out of outputs/"
+        },
+        {
+          "id": "OS-8",
+          "text": "Add the five Vercel env vars and check /api/setup reports all ok"
         }
       ],
-      "done_count": 2,
-      "last_log": "2026-10-26: Phase 1 live — schema, builder and Action on master; restore point on branch pre-v4.",
+      "done_count": 3,
+      "last_log": "2026-10-29: Phase 2 built — webhook, Claude tools, confirm/edit/cancel/undo; 15 offline tests passing. Goes live at cutover (OS-8, then OS-6).",
       "title": "ThabaniOS v4",
       "type": "personal",
       "next_action": "OS-1 Review migrated project files (priorities, finish lines, tasks)",
       "blocker": null,
-      "date_canvassed": "2026-10-26",
-      "last_modified": "2026-10-26T00:00:00.000Z"
+      "date_canvassed": "2026-10-29",
+      "last_modified": "2026-10-29T00:00:00.000Z"
     },
     {
       "id": "golden-key",
